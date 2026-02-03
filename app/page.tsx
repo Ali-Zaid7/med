@@ -29,7 +29,7 @@ export default function Home() {
           Experience personalized, AI-driven healthcare that provides smart diagnoses, health tracking, and real-time medical insights — all in one place.
         </p>
 
-        <Link href={"sign-in"}>
+        <Link href={"/dashboard"}>
           <div className="relative z-10 mt-8 flex items-center justify-center gap-4">
             <button className="w-60 rounded-lg dark:bg-[#009f6b] dark:text-white bg-black px-6 py-2 text-white hover:bg-gray-800 dark:hover:bg-gray-200 transition">
               Get Started
@@ -69,7 +69,7 @@ const Navbar = ({ theme, setTheme }: { theme: string | undefined; setTheme: (v: 
           </Link>
         ) : (
           <div className="flex gap-5 items-center ">
-            <Link href={"dashboard"}>
+            <Link href={"/dashboard"}>
             <Button className=" dark:bg-[#009f6b] dark:text-white">Dashboard</Button>
             </Link>
              <ThemeToggle /> {/* uses useTheme internally */}<UserButton />
