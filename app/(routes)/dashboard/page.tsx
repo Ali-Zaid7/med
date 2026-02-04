@@ -1,4 +1,5 @@
 import React from 'react'
+export const dynamic = 'force-dynamic'
 import HistoryList from './_components/HistoryList'
 import { Button } from '@/components/ui/button'
 import DoctorsAgentList from './_components/DoctorsAgentList'

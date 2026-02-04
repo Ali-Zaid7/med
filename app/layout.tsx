@@ -12,6 +12,8 @@ import {
 } from '@clerk/nextjs'
 import Provider from "@/provider";
 
+export const dynamic = 'force-dynamic'
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

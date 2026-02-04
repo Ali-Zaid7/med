@@ -16,11 +16,11 @@ export async function POST(req:NextRequest) {
         .where(eq(usersTable.email, user?.primaryEmailAddress?.emailAddress));
         if(users?.length==0){
             const result=await db.insert(usersTable).values({
-                name: user?.fullName,
-                email: user?.primaryEmailAddress?.emailAddress,
+                name: user?.fullName ?? '',
+                email: user?.primaryEmailAddress?.emailAddress ?? '',
                 credits: 10
-            }).returning({usersTable})
-            return NextResponse.json(result[0].usersTable);
+            }).returning()
+            return NextResponse.json(result[0]);
         }
         return NextResponse.json(users[0]);
     }
